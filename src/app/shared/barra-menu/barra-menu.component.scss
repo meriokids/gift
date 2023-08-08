@@ -1,0 +1,51 @@
+:host {
+    ::ng-deep .bg-gift {
+        background: hsla(269, 61%, 38%, 1);
+        background: linear-gradient(0deg, hsla(269, 61%, 38%, 1) 60%, hsla(329, 100%, 42%, 1) 100%);
+        background: -moz-linear-gradient(0deg, hsla(269, 61%, 38%, 1) 60%, hsla(329, 100%, 42%, 1) 100%);
+        background: -webkit-linear-gradient(0deg, hsla(269, 61%, 38%, 1) 60%, hsla(329, 100%, 42%, 1) 100%);
+
+        margin: 0px;
+        border: none;
+        border-radius: 0px;
+        
+    }
+
+    ::ng-deep .p-menuitem-icon {
+        color: white !important;
+    }
+
+    ::ng-deep .p-menuitem-text {
+        color: white !important;
+        text-transform: uppercase !important;
+        font-weight: 600;
+    }
+
+    ::ng-deep .p-menuitem-link:hover {
+        background-color: transparent !important;
+    }
+
+    ::ng-deep .p-menuitem-link:focus {
+       box-shadow: none !important;
+    }
+ 
+}
+
+
+::ng-deep  .p-menubar-start {
+        display: flex !important;
+        align-items: center !important;
+        color: white;
+}
+
+
+::ng-deep .p-menubar {
+    position: sticky;
+    position: -webkit-sticky; // Needed for Safari browsers.
+    z-index: 10000; // This prevents elements to be seen through the toolbar.
+    top: 0; // Required for "position: sticky" to take effect.
+}
+
+::ng-deep .p-component {
+    font-family: 'Open Sans', sans-serif !important;
+}

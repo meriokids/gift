@@ -1,0 +1,29 @@
+
+
+::ng-deep .carousel {
+    bottom: 8px;
+}
+
+::ng-deep c-carousel-caption {
+    top: 0rem !important;
+}
+
+
+.imageSlide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    top: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: var(--cui-carousel-caption-color, rgba(255, 255, 255, 0.87));
+    text-align: center;
+}

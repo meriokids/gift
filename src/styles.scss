@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@coreui/coreui/scss/coreui";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;500;600&display=swap');
+
+
+
+$primary-color: #60269E;
+$secondary-color: #D6006D;
+$lightgray: #EFEFEF;
+$medgray: #B0B0B0;
+$gray: #636363;
+$darkgray: #323232;
+$deafult-font:'Open Sans', sans-serif; 
+$secondary-font: 'Montserrat', sans-serif;
+
+
+
+html, body { padding: 0; margin: 0 !important; font-family: $deafult-font;} 
+
+.title {
+    font-size: 38px;
+    font-weight: 600;
+    font-family: $secondary-font;
+    color: $primary-color;
+    margin: 0px;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: $deafult-font;
+    color: $gray;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+
+.title-w {
+    font-size: 38px;
+    font-weight: 600;
+    font-family: $secondary-font;
+    color: $lightgray;
+    margin: 0px;
+}
+
+.subtitle-w {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $deafult-font;
+    color: $medgray;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+#footer {
+    background-color: $secondary-color;
+    padding: 10px 10px;
+    color: $lightgray;
+    text-align: center;
+}
+
+#contacto {
+    background-color: #2F0E52;
+}
+
+.txt-secondary {
+    color: $secondary-color !important;
+}
+
+.txt-primary {
+    color: $primary-color !important;
+}

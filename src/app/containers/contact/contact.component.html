@@ -1,0 +1,52 @@
+<div id="contacto">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12 md:col-5">
+                <h1 class="title-w">Contacto</h1>
+                <h4 class="subtitle-w">llegamos a todo el país , nuestros clientes nos avalan</h4>
+
+                <div class="flex flex-column gap-2 my-3">
+                    <label class="text-white" htmlFor="nombre">Nombre completo</label>
+                    <input pInputText id="nombre" aria-describedby="nombre" [(ngModel)]="value" placeholder="Nombre completo" />
+                    <small class="text-danger"  id="ayuda-nombre">Ingresa tu nombre completo.</small>
+                </div>
+
+
+                <div class="flex flex-column gap-2 my-3">
+                    <label class="text-white" htmlFor="nombre">Empresa</label>
+                    <input pInputText id="empresa" aria-describedby="empresa" [(ngModel)]="value" placeholder="Empresa" />
+                    <small class="text-danger"  id="ayuda-empresa">Ingresa el nombre de tu empresa.</small>
+                </div>
+
+                <!-- <div class="flex flex-column gap-2 my-3">
+                    <label class="p-treeselect-label text-white" htmlFor="servicio">Servicio o Producto</label>
+                    <p-treeSelect class="w-full" aria-describedby="ayuda-service" containerStyleClass="w-full" [(ngModel)]="selectedNodes" [options]="nodes" placeholder="Selecciona el servicio y/o producto que te interesó"></p-treeSelect>
+                    <small class="text-danger" id="ayuda-service">Ingresa tu nombre completo.</small>
+                </div> -->
+
+
+                <div class="flex flex-column gap-2 my-3">
+                    <label class="p-treeselect-label text-white" htmlFor="mensaje">Mensaje</label>
+                    <textarea rows="3" cols="30" aria-describedby="ayuda-txt" pInputTextarea [(ngModel)]="message"></textarea>
+                    <small class="text-danger" id="ayuda-txt">Ingresa tu mensaje.</small>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="col-12 md:col-7 py-5">
+                <p-image src="./assets/images/mapa.png" alt="Image" width="100%" height="auto"></p-image> 
+                <h3 class="font-semibold p-5 text-white">Tenemos presencia en 24 estados</h3>              
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer" class="grid">
+    <div class="col-12">
+        <small>Gift® Todos los derechos reservados. Aviso de Privacidad | Términos y Condiciones</small>
+    </div>
+</div>
