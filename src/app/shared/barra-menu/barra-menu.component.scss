@@ -49,3 +49,34 @@
 ::ng-deep .p-component {
     font-family: 'Open Sans', sans-serif !important;
 }
+
+
+::ng-deep .p-menubar .p-submenu-list {
+    padding: 0.25rem 0;
+    background: #732495 !important;
+    border: 0 none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    width: 12.5rem;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover {
+    background: #5f269c;
+}
+
+
+@media screen and (max-width: 960px) {
+::ng-deep 
+.p-menubar .p-menubar-root-list {
+    position: absolute;
+    display: none;
+    padding: 0.25rem 0;
+    background: #5f269c !important;
+    border: 0 none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+}
+
+::ng-deep .p-menubar .p-menuitem.p-menuitem-active > .p-menuitem-link {
+    background:#5f269c !important;
+}

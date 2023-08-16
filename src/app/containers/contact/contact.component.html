@@ -1,50 +1,65 @@
 <div id="contacto">
     <div class="container">
         <div class="grid">
-            <div class="col-12 md:col-5">
-                <h1 class="title-w">Contacto</h1>
+
+            <div class="col-12 md:col-6">
+                <p-image src="./assets/images/logo.png" alt="Image" width="100px" height="auto"></p-image> 
+                <h4 class="font-semibold my-3 text-white">Contacto</h4> 
+                <div class="text-white">
+                    <p><i class="fas fa-envelope mx-2 fa-lg"></i>contacto@mktgift.com.mx</p>
+                    <p><i class="fas fa-phone mx-2 fa-lg"></i>53 2034 0494</p>
+                    <p><i class="fab fa-whatsapp mx-2 fa-lg"></i>53 2034 0494</p>
+                </div>
+                <h4 class="font-semibold my-3 text-white"><strong>Ubicación:</strong></h4>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15049.279116198208!2d-99.20098225!3d19.441774900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2021a6e3a3d09%3A0x9372e2224c033cb3!2sMuseo%20Soumaya!5e0!3m2!1sen!2smx!4v1692115095484!5m2!1sen!2smx" width="70%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded"></iframe>
+            </div>
+
+
+            <div class="col-12 md:col-6">
                 <h4 class="subtitle-w">llegamos a todo el país , nuestros clientes nos avalan</h4>
 
+
+
+
+                <form [formGroup]="datos">
                 <div class="flex flex-column gap-2 my-3">
                     <label class="text-white" htmlFor="nombre">Nombre completo</label>
-                    <input pInputText id="nombre" aria-describedby="nombre" [(ngModel)]="value" placeholder="Nombre completo" />
+                    <input pInputText id="nombre" aria-describedby="nombre"  placeholder="Nombre completo" formControlName="nombre"/>
                     <small class="text-danger"  id="ayuda-nombre">Ingresa tu nombre completo.</small>
                 </div>
 
-
                 <div class="flex flex-column gap-2 my-3">
                     <label class="text-white" htmlFor="nombre">Empresa</label>
-                    <input pInputText id="empresa" aria-describedby="empresa" [(ngModel)]="value" placeholder="Empresa" />
-                    <small class="text-danger"  id="ayuda-empresa">Ingresa el nombre de tu empresa.</small>
+                    <input pInputText id="empresa" aria-describedby="empresa"  placeholder="Empresa" formControlName="empresa"/>
+                    <small class="text-danger"  id="ayuda-empresa">Ingresa la empresa.</small>
                 </div>
 
-                <!-- <div class="flex flex-column gap-2 my-3">
-                    <label class="p-treeselect-label text-white" htmlFor="servicio">Servicio o Producto</label>
-                    <p-treeSelect class="w-full" aria-describedby="ayuda-service" containerStyleClass="w-full" [(ngModel)]="selectedNodes" [options]="nodes" placeholder="Selecciona el servicio y/o producto que te interesó"></p-treeSelect>
-                    <small class="text-danger" id="ayuda-service">Ingresa tu nombre completo.</small>
-                </div> -->
 
+                <div class="flex flex-column gap-2 my-3">
+                    <label class="text-white" htmlFor="nombre">Correo</label>
+                    <input pInputText id="correo" aria-describedby="correo" placeholder="correo" formControlName="correo"/>
+                    <small class="text-danger"  id="ayuda-correo">Ingresa el nombre de tu empresa.</small>
+                </div>
 
                 <div class="flex flex-column gap-2 my-3">
                     <label class="p-treeselect-label text-white" htmlFor="mensaje">Mensaje</label>
-                    <textarea rows="3" cols="30" aria-describedby="ayuda-txt" pInputTextarea [(ngModel)]="message"></textarea>
+                    <textarea rows="3" cols="30" aria-describedby="ayuda-txt" pInputTextarea formControlName="mensaje"></textarea>
                     <small class="text-danger" id="ayuda-txt">Ingresa tu mensaje.</small>
                 </div>
 
 
                 <div class="flex justify-content-center">
-                    <button class="btn btn-lg btn-outline-light text-uppercase fw-bold mt-2 mb-4 w-100">Enviar</button>
+                    <button class="btn btn-lg btn-outline-light text-uppercase fw-bold mt-2 mb-4 w-100" (click)="envioCorreo()">Enviar</button>
                 </div>
+            </form>
 
 
 
 
             </div>
 
-            <div class="col-12 md:col-7 py-5">
-                <p-image src="./assets/images/mapa.png" alt="Image" width="100%" height="auto"></p-image> 
-                <h3 class="font-semibold p-5 text-white">Tenemos presencia en 24 estados</h3>              
-            </div>
+           
         </div>
     </div>
 </div>
@@ -55,3 +70,12 @@
         <small>Gift® Todos los derechos reservados. Aviso de Privacidad | Términos y Condiciones</small>
     </div>
 </div>
+
+
+
+
+                <!-- <div class="flex flex-column gap-2 my-3">
+                    <label class="p-treeselect-label text-white" htmlFor="servicio">Servicio o Producto</label>
+                    <p-treeSelect class="w-full" aria-describedby="ayuda-service" containerStyleClass="w-full" [(ngModel)]="selectedNodes" [options]="nodes" placeholder="Selecciona el servicio y/o producto que te interesó"></p-treeSelect>
+                    <small class="text-danger" id="ayuda-service">Ingresa tu nombre completo.</small>
+                </div> -->

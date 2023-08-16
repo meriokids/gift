@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { TreeSelectModule } from 'primeng/treeselect';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { TabViewModule } from 'primeng/tabview';
 
 
 
@@ -25,6 +27,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     InputTextModule,
     TreeSelectModule,
     InputTextareaModule,
+    TabMenuModule,
+    TabViewModule,
   ],
   exports: [
     MenubarModule,
@@ -34,7 +38,9 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     FormsModule,
     InputTextModule,
     TreeSelectModule,
-    InputTextareaModule
+    InputTextareaModule,
+    TabMenuModule,
+    TabViewModule
   ]
 })
 export class PrimengModule { }

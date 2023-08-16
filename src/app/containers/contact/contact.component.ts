@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { SubjectService } from 'src/app/services/subject.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import * as Notiflix from 'notiflix';
 
 
 @Component({
@@ -8,15 +10,47 @@ import { SubjectService } from 'src/app/services/subject.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  value: string | undefined;
+  // value: string | undefined;
 
-  message: string | undefined;
+  // message: string | undefined;
 
-  nodes!: any[];
+  // nodes!: any[];
 
-    selectedNodes: any;
+  //   selectedNodes: any;
 
-    constructor(private nodeService: SubjectService) {
-        this.nodeService.getFiles().then((files) => (this.nodes = files));
+  //   constructor(private nodeService: SubjectService) {
+  //       this.nodeService.getFiles().then((files) => (this.nodes = files));
+  //   }
+
+  datos:FormGroup;
+
+  constructor(private httpclient:HttpClient){
+    this.datos = new FormGroup(
+      {
+        nombre: new FormControl('',Validators.required),
+        empresa: new FormControl('',Validators.required),
+        correo: new FormControl('',[Validators.required,Validators.email]),
+        mensaje: new FormControl('',Validators.required),
+    })
+  }
+
+
+  envioCorreo(){
+    Notiflix.Loading.standard('Cargando..');
+    let params = {
+      name:this.datos.value.nombre,
+      empresa:this.datos.value.empresa,
+      correo:this.datos.value.correo,
+      message:this.datos.value.mensaje,
+      
     }
+    console.log(params)
+      this.httpclient.post('http://localhost:3000/envio',params).subscribe(resp=>{
+        console.log(resp)
+        Notiflix.Loading.remove();
+        Notiflix.Notify.success('Enviado Correctamente');
+      })
+  }
+
+
 }
