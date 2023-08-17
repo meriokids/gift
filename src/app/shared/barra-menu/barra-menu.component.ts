@@ -15,11 +15,13 @@ export class BarraMenuComponent  implements OnInit {
           {
               label: 'Nosotros',
               routerLink: "/",
+              fragment: "about" 
             //   icon: 'pi pi-fw pi-building'
           },
           {
             label: 'Ventajas',
             routerLink: "/",
+            fragment: "advantages"
             // icon: 'pi pi-fw pi-star'
         },
         {
@@ -46,11 +48,13 @@ export class BarraMenuComponent  implements OnInit {
         {
             label: 'Servicios',
             routerLink: "/",
+            fragment: "ourservice"
             // icon: 'pi pi-fw pi-check'
         },
         {
             label: 'Contacto',
             routerLink: "/",
+            fragment: "contact" 
             // icon: 'pi pi-fw pi-envelope'
         },
       ];

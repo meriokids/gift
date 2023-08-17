@@ -62,6 +62,7 @@ import { HttpClientModule } from '@angular/common/http';
     FontAwesomeModule,
     ReactiveFormsModule,
     HttpClientModule,
+
    
   ],
   providers: [ 

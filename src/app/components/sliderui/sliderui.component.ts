@@ -48,7 +48,6 @@ export class SlideruiComponent implements OnInit {
       image:'./assets/images/slide-03-A.png',
       button:'Envíanos un Mensaje'
     }
-    
 
   }
 
