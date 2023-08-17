@@ -45,12 +45,18 @@ export class ContactComponent {
       
     }
     console.log(params)
-      this.httpclient.post('http://localhost:3000/envio',params).subscribe(resp=>{
+      this.httpclient.post('https://backend-gift-0k3h.onrender.com/envio',params).subscribe(resp=>{
         console.log(resp)
         Notiflix.Loading.remove();
         Notiflix.Notify.success('Enviado Correctamente');
+        this.datos.reset();
       })
   }
 
-
 }
+
+Notiflix.Notify.init({
+  width: '300px',
+  position: 'right-bottom',
+  closeButton: false,
+  });

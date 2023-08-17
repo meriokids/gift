@@ -11,6 +11,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { TabViewModule } from 'primeng/tabview';
+import { DialogModule } from 'primeng/dialog';
 
 
 
@@ -29,6 +30,7 @@ import { TabViewModule } from 'primeng/tabview';
     InputTextareaModule,
     TabMenuModule,
     TabViewModule,
+    DialogModule,
   ],
   exports: [
     MenubarModule,
@@ -40,7 +42,8 @@ import { TabViewModule } from 'primeng/tabview';
     TreeSelectModule,
     InputTextareaModule,
     TabMenuModule,
-    TabViewModule
+    TabViewModule,
+    DialogModule,
   ]
 })
 export class PrimengModule { }
