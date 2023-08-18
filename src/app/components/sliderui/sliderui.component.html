@@ -18,7 +18,7 @@
             <div class="md:col-6 col-6">
               <div class="text-left d-none d-md-block my-5">
                 <h1>{{slide.title}}</h1>
-                <button class="btn btn-lg btn-outline-light text-uppercase fw-bold my-4">{{slide.button}}</button>
+                <a class="btn btn-lg btn-outline-light text-uppercase fw-bold my-4" [href]="slide.href | safeUrl" [target]="slide.target">{{slide.button}}</a>
               </div>
 
               <div class="text-left d-md-none d-block">

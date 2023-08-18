@@ -19,7 +19,7 @@ import { AdvantagesComponent } from './containers/advantages/advantages.componen
 import { OurserviceComponent } from './containers/ourservice/ourservice.component';
 import { ContactComponent } from './containers/contact/contact.component';
 import { ParallaxComponent } from './components/parallax/parallax.component';
-import { SlideruiComponent } from './components/sliderui/sliderui.component';
+import { SafeUrlPipe, SlideruiComponent } from './components/sliderui/sliderui.component';
 import { SubjectService } from './services/subject.service';
 import { Parallax2Component } from './components/parallax2/parallax2.component';
 import { CatalogoComponent } from './containers/catalogo/catalogo.component';
@@ -50,6 +50,7 @@ import { HttpClientModule } from '@angular/common/http';
     GiftComponent,
     PromocionalesComponent,
     TextilComponent,
+    SafeUrlPipe,
     
   ],
   imports: [
