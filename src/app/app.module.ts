@@ -29,6 +29,7 @@ import { PromocionalesComponent } from './containers/catalogo/promocionales/prom
 import { TextilComponent } from './containers/catalogo/textil/textil.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -51,6 +52,7 @@ import { HttpClientModule } from '@angular/common/http';
     PromocionalesComponent,
     TextilComponent,
     SafeUrlPipe,
+    ModalComponent,
     
   ],
   imports: [

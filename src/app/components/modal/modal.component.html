@@ -1,0 +1,13 @@
+<div class="card flex justify-content-center">
+  <p-button (click)="showDialog()" icon="pi pi-external-link" label="Show"></p-button>
+  <p-dialog [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+    <div class="video-container m-0">
+        <iframe 
+        src="https://www.youtube.com/embed/KwAZPr6K1hs?si=5GvSMa1D97szuasL" 
+        class="video"
+        title="YouTube video player" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+    </div>
+  </p-dialog>
+</div>
