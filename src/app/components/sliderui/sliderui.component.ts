@@ -16,47 +16,63 @@ export class SlideruiComponent implements OnInit {
      this.visible = true;
    }
  
-
-   
-
-
-  slides: any[] = new Array(1).fill({id: -1, src: '', title: '', subtitle: '', image:'', button:''});
+  slides: any[] = [];
 
   constructor() { }
 
 
   ngOnInit(): void {
-    this.slides[0] = {
-      id: 0,
-      src: './assets/images/slide-01.jpg',
-      title: 'Termos y Cilindros con tu Marca',
-      subtitle: 'Personalizados con tu maraca',
-      image:'./assets/images/slide-01-A.png',
-      button:'Consulta nuestro Catálogo',
-      href: '/catalogo',
-      target: '_self'
-    };
-    this.slides[1] = {
-      id: 1,
-      src: './assets/images/slide-02.jpg',
-      title: 'Regalos y Kits Empresariales ',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image:'./assets/images/slide-02-A.png',
-      button:'Pide una cotización',
-      href:'#contact',
-      target: '_self'
-    }
-    this.slides[2] = {
-      id: 2,
-      src: './assets/images/slide-03.jpg',
-      title: 'Productos para Premiaciones y Kits de Carrera',
-      subtitle: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.',
-      image:'./assets/images/slide-03-A.png',
-      button:'Envíanos un Mensaje',
-      href:'https://wa.me/525515711872',
-      target: '_blank'
-    }
-
+    this.slides = [
+      {
+        id: 0,
+        src: './assets/images/slide-stand.png',
+        bg: '',
+        title: 'STAND',
+        subtitle: '',
+        button: '',
+        href: '/catalogo',
+        target: '_self'
+      },
+      {
+        id: 1,
+        src: './assets/images/slide-catering.png',
+        bg: './assets/images/slide-catering-bg.jpg',
+        title: 'CATERING',
+        imageClass: 'hero-image hero-image--catering',
+        mediaClass: 'hero-media hero-media--bottom',
+        shellClass: 'hero-shell hero-shell--catering',
+        subtitle: '',
+        button: '',
+        href: '/catalogo',
+        target: '_self'
+      },
+      {
+        id: 2,
+        src: './assets/images/slide-textil.png',
+        bg: '',
+        bgColor: '#c3c3c3',
+        title: 'TEXTIL',
+        subtitle: '',
+        button: '',
+        href: '/catalogo',
+        target: '_self'
+      },
+      {
+        id: 3,
+        src: './assets/images/slide-promos.png',
+        bg: './assets/images/slide-promos-bg.jpg',
+        title: 'PROMOCIONALES',
+        imageClass: 'hero-image hero-image--promos',
+        mediaClass: 'hero-media hero-media--bottom',
+        copyClass: 'hero-copy hero-copy--promos',
+        titleClass: 'hero-title hero-title--promos',
+        shellClass: 'hero-shell hero-shell--promos',
+        subtitle: '',
+        button: '',
+        href: '/catalogo',
+        target: '_self'
+      }
+    ];
   }
 
  
@@ -73,4 +89,3 @@ export class SafeUrlPipe implements PipeTransform {
     return this.domSanitizer.bypassSecurityTrustUrl(value);
   }
 }
-

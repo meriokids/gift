@@ -1,55 +1,24 @@
-<c-carousel styleClass="slider" id="slider">
+<c-carousel styleClass="slider" id="slider" transition="crossfade">
     <c-carousel-indicators></c-carousel-indicators>
     <c-carousel-inner>
-      <c-carousel-item *ngFor="let slide of slides">
-        <img
-          alt="{{slide.title}}"
-          class="d-block w-100"
-          loading="lazy"
-          src="{{slide.src}}"
-        />
-
-
-       
-
-        <c-carousel-caption>
-          <div class="row p-0 m-0">
-           
-            <div class="md:col-6 col-6">
-              <div class="text-left d-none d-md-block my-5">
-                <h1>{{slide.title}}</h1>
-                <a class="btn btn-lg btn-outline-light text-uppercase fw-bold my-4" [href]="slide.href | safeUrl" [target]="slide.target">{{slide.button}}</a>
-              </div>
-
-              <div class="text-left d-md-none d-block">
-                <small>{{slide.title}}</small>
-              </div>
-
-
-              <!-- <p class="d-none d-md-block">{{slide.subtitle}}</p> -->
-            </div>
-
-
-            <div class="col-6 md:col-6">
-              <div class="imageSlide"><img src="{{slide.image}}" alt="{{slide.title}}" class="img-fluid" /></div>
+      <c-carousel-item *ngFor="let slide of slides" [ngStyle]="slide.bg ? {'background-image': 'url(' + slide.bg + ')'} : (slide.bgColor ? {'background-color': slide.bgColor} : null)" [class.slide-with-bg]="slide.bg">
+        <div [class]="slide.shellClass || 'hero-shell'">
+          <div [class]="slide.copyClass || 'hero-copy'">
+            <div class="hero-copy__inner">
+              <h1 [class]="slide.titleClass || ''">{{slide.title}}</h1>
+              <p *ngIf="slide.subtitle">{{slide.subtitle}}</p>
+              <a *ngIf="slide.button" class="btn btn-light text-uppercase fw-bold hero-cta" [href]="slide.href | safeUrl" [target]="slide.target">{{slide.button}}</a>
             </div>
           </div>
-
-         
-
-        </c-carousel-caption>
-
+          <div *ngIf="slide.src" [class]="slide.mediaClass || 'hero-media'">
+            <img
+              alt="{{slide.title}}"
+              [class]="slide.imageClass || 'hero-image'"
+              loading="lazy"
+              src="{{slide.src}}"
+            />
+          </div>
+        </div>
       </c-carousel-item>
     </c-carousel-inner>
-    <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
-    <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
   </c-carousel>
-
-
-
-  <p-dialog header="Header" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
-   <p class="m-0">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-</p-dialog>
