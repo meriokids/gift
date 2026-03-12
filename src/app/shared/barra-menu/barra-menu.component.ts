@@ -28,19 +28,19 @@ export class BarraMenuComponent  implements OnInit {
             label: 'Catálogo',
             items: [
               {
-                  label: 'Completo 2025',  
+                  label: 'Completo 2026',  
                   routerLink: "/catalogo",
               },
               {
-                  label: 'Gift 2025',  
+                  label: 'Gift 2026',  
                   routerLink: "/gift",
               },
               {
-                  label: 'Promocionales 2025',
+                  label: 'Promocionales 2026',
                   routerLink: "/promocionales",
               },
               {
-                  label: 'Textil 2025',
+                  label: 'Textil 2026',
                   routerLink: "/textil",
               }
           ]
