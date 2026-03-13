@@ -125,13 +125,21 @@
   font-size: clamp(4rem, 8vw, 120px);
   line-height: 0.9;
   font-weight: 900;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
   color: #ffffff;
 }
 
+.hero-copy__inner p,
+.hero-copy__inner .hero-cta {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.03em;
+}
+
 .hero-title--promos {
-  font-size: clamp(2.8rem, 4.8vw, 72px) !important;
+  font-size: clamp(3.4rem, 5.8vw, 88px) !important;
 }
 
 .hero-copy__inner p {
